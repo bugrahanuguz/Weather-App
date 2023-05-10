@@ -1,4 +1,4 @@
-# flutter_bee_app_training
+# flutter_weather_app_training
 
 A new Flutter project.
 
