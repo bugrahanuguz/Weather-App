@@ -13,14 +13,9 @@ class CityEntryViewModel with ChangeNotifier {
   void refreshWeather(String newCity, BuildContext context) {
     Provider.of<WeatherViewModel>(context, listen: false)
         .getLatestWeather(_city, context);
-    Provider.of<ForecastViewModel>(context, listen: true).getForecast(
-        context.watch<WeatherViewModel>().currentWeather!.coord!.lat.toString(),
-        context
-            .watch<WeatherViewModel>()
-            .currentWeather!
-            .coord!
-            .lon
-            .toString());
+    context.read<ForecastViewModel>().getForecast(
+        context.read<WeatherViewModel>().currentWeather!.coord!.lat.toString(),
+        context.read<WeatherViewModel>().currentWeather!.coord!.lon.toString());
     notifyListeners();
   }
 
