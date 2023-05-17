@@ -1,10 +1,9 @@
 import 'dart:convert';
 import 'package:flutter_bee_app_training/models/weather_moderls.dart';
-import 'package:weather/weather.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherService {
-  String key = "";
+  String key = "2f486d31ac1b60c7629402f9eaaf4b97";
   String name = "Istanbul";
   String baseApi = "https://api.openweathermap.org/data/2.5/weather?q=";
   Uri getUrl(String cityName) =>
